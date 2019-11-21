@@ -1,4 +1,4 @@
-package ch.bfh.theforkers.heroes.boot.entities;
+package ch.bfh.theforkers.heroes.camp.entities;
 
 import java.util.List;
 

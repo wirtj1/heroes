@@ -1,7 +1,7 @@
-package ch.bfh.theforkers.heroes.boot.service;
+package ch.bfh.theforkers.heroes.camp.service;
 
-import ch.bfh.theforkers.heroes.boot.entities.Hero;
-import ch.bfh.theforkers.heroes.boot.entities.Party;
+import ch.bfh.theforkers.heroes.camp.entities.Hero;
+import ch.bfh.theforkers.heroes.camp.entities.Party;
 
 import java.util.ArrayList;
 import java.util.List;

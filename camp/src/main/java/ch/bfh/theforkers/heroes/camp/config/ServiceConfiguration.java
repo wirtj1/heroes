@@ -1,5 +1,9 @@
-package ch.bfh.theforkers.heroes.boot.config;
+package ch.bfh.theforkers.heroes.camp.config;
 
+import ch.bfh.theforkers.heroes.camp.service.EpicHeroService;
+import ch.bfh.theforkers.heroes.camp.service.GreatPartyService;
+import ch.bfh.theforkers.heroes.camp.service.HeroService;
+import ch.bfh.theforkers.heroes.camp.service.PartyService;
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import cz.jirutka.spring.embedmongo.EmbeddedMongoBuilder;
@@ -8,15 +12,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import ch.bfh.theforkers.heroes.boot.service.EpicHeroService;
-import ch.bfh.theforkers.heroes.boot.service.GreatPartyService;
-import ch.bfh.theforkers.heroes.boot.service.HeroService;
-import ch.bfh.theforkers.heroes.boot.service.PartyService;
 
 import java.io.IOException;
 
 @Configuration
-@EnableMongoRepositories(basePackages = "ch/bfh/theforkers/heroes/boot/repo")
+@EnableMongoRepositories(basePackages = "ch.bfh.theforkers.heroes.camp.repo")
 public class ServiceConfiguration {
 	@Bean
 	public HeroService heroService() {

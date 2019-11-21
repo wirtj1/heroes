@@ -1,8 +1,8 @@
-package ch.bfh.theforkers.heroes.boot.service;
+package ch.bfh.theforkers.heroes.camp.service;
 
-import ch.bfh.theforkers.heroes.boot.entities.Hero;
+import ch.bfh.theforkers.heroes.camp.entities.Hero;
+import ch.bfh.theforkers.heroes.camp.repo.HeroRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import ch.bfh.theforkers.heroes.boot.repo.HeroRepo;
 
 import java.util.Random;
 
