@@ -4,13 +4,13 @@ import ch.bfh.theforkers.heroes.camp.service.EpicHeroService;
 import ch.bfh.theforkers.heroes.camp.service.GreatPartyService;
 import ch.bfh.theforkers.heroes.camp.service.HeroService;
 import ch.bfh.theforkers.heroes.camp.service.PartyService;
-import com.mongodb.Mongo;
-import com.mongodb.MongoClient;
+//import com.mongodb.Mongo;
+//import com.mongodb.MongoClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+//import org.springframework.data.mongodb.core.MongoTemplate;
+//import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 import java.io.IOException;
 
@@ -23,8 +23,8 @@ public class ServiceConfiguration {
     }
 
     @Bean
-    public PartyService campService(HeroService heroService) {
-        return new GreatPartyService(heroService);
+    public PartyService partyService() {
+        return new GreatPartyService();
     }
 
 //    @Bean

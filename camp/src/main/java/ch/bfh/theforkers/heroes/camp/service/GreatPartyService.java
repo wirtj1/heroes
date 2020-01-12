@@ -2,17 +2,19 @@ package ch.bfh.theforkers.heroes.camp.service;
 
 import ch.bfh.theforkers.heroes.camp.entities.Hero;
 import ch.bfh.theforkers.heroes.camp.entities.Party;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GreatPartyService implements PartyService {
 
+	@Autowired
 	private HeroService heroService;
 
-	public GreatPartyService(HeroService heroService) {
-		this.heroService = heroService;
-	}
+//	public GreatPartyService(HeroService heroService) {
+//		this.heroService = heroService;
+//	}
 
 	public Party createParty(String name) {
 		Party party = new Party();
