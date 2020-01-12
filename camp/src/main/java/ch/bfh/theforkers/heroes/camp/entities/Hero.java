@@ -1,22 +1,17 @@
 package ch.bfh.theforkers.heroes.camp.entities;
 
-import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
 @Document
 public class Hero {
 
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
     private String name;
     private int atk;
     private int def;
-    private int hp;
+    private double hp;
 
     public String getId() {
         return id;
@@ -50,11 +45,11 @@ public class Hero {
         this.def = def;
     }
 
-    public int getHp() {
+    public double getHp() {
         return hp;
     }
 
-    public void setHp(int hp) {
+    public void setHp(double hp) {
         this.hp = hp;
     }
 }
