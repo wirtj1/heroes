@@ -1,12 +1,12 @@
 package ch.bfh.theforkers.heroes.camp.entities;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Document
 public class Hero {
 
     @Id
