@@ -20,7 +20,7 @@ public class PartyController {
     @Autowired
     private RepositoryEntityLinks entityLinks;
 
-    @PostMapping(value = "/createParty")
+    @GetMapping(value = "/createParty")
     public Party createParty(@RequestParam String name) {
         Party party = partyService.createParty(name);
         party.add(linkTo(methodOn(PartyController.class).createParty(name)).withSelfRel());
