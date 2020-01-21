@@ -5,7 +5,12 @@ import ch.bfh.theforkers.heroes.arena.model.Hero;
 import ch.bfh.theforkers.heroes.arena.model.Party;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -82,7 +87,18 @@ public class DefaultBattleService implements BattleService {
 
         // battle until hp runs out
         while(defender.getHp() >= 0) {
+            if(Math.random() > 0.7){
+                Double currentHp = defender.getHp();
+                ResponseEntity<Double> response =  new RestTemplate().exchange(
+                        "http://localhost:8083/healer/heal?hp={currentHp}",
+                        HttpMethod.GET,
+                        null,
+                       Double.class
+                        ,currentHp);
+                Double newHp = response.getBody();
+                defender.setHp(newHp);
 
+            }
             // swap attacker and defender
             Hero temp = attacker;
             attacker = defender;

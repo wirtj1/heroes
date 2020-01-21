@@ -17,8 +17,12 @@ public class EpicHeroService implements HeroService {
 		hero.setAtk(new Random().nextInt(100));
 		hero.setDef(new Random().nextInt(100));
 		hero.setHp(100);
+		String id = heroRepo.save(hero).getId();
 
-		return heroRepo.save(hero);
+		System.out.println("Hero "+name+" has been created");
+		System.out.println("Heros with ATK greater than 50: "+heroRepo.countByAtkGreaterThan(50));
+
+		return heroRepo.findById(id).get();
 
 	}
 

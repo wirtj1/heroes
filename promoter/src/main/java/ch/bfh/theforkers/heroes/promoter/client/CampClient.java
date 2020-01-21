@@ -1,9 +1,9 @@
 package ch.bfh.theforkers.heroes.promoter.client;
 
 import ch.bfh.theforkers.heroes.promoter.model.Party;
-import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.EntityModel;
 
 public interface CampClient {
 
-    public Resource<Party> createParty(String name);
+    EntityModel<Party> createParty(String name);
 }
