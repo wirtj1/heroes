@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-@FeignClient(value = "camp-ch.bfh.theforkers.heroes.potionshop.service")
+@FeignClient(value = "camp-service")
 @RequestMapping("/party")
 public interface CampClient {
 

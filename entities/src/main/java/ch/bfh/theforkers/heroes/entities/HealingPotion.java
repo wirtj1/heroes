@@ -1,10 +1,7 @@
 package ch.bfh.theforkers.heroes.entities;
 
-import org.springframework.data.annotation.Id;
-
 public class HealingPotion {
 
-    @Id
     private String id;
     private int price;
     private String name;

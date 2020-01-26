@@ -1,12 +1,13 @@
-package ch.bfh.theforkers.heroes.entities.service;
+package ch.bfh.theforkers.heroes.arena.service;
 
 
+import ch.bfh.theforkers.heroes.arena.client.HealerClient;
 import ch.bfh.theforkers.heroes.entities.Hero;
 import ch.bfh.theforkers.heroes.entities.Party;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,9 +18,13 @@ import java.util.List;
 @Service
 public class DefaultBattleService implements BattleService {
 
+    /*
+    @Autowired
+    private HealerClient healerClient;
+    */
+
     private static final Logger LOG = LoggerFactory.getLogger(DefaultBattleService.class);
     private static final DecimalFormat f = new DecimalFormat("##.00");
-
     @Override
     public String battle(Party challengeeParty, Party challengerParty) {
 
@@ -86,15 +91,14 @@ public class DefaultBattleService implements BattleService {
         // battle until hp runs out
         while(defender.getHp() >= 0) {
             if(Math.random() > 0.9){
-                ResponseEntity<Double> response =  new RestTemplate().exchange(
-                        "http://localhost:8083/healer/heal?hero={hero}",
-                        HttpMethod.GET,
-                        null,
-                       Double.class
-                        ,defender);
-                Double newHp = response.getBody();
-                defender.setHp(newHp);
-
+                //defender = healerClient.heal(defender);
+                HttpHeaders headers = new HttpHeaders();
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                HttpEntity entity = new HttpEntity(defender,headers);
+                ResponseEntity<Hero> out = new RestTemplate().exchange("http://localhost:8083/healer/heal", HttpMethod.POST, entity
+                        , Hero.class);
+                Hero hero = out.getBody();
+                defender = hero;
             }
             // swap attacker and defender
             Hero temp = attacker;

@@ -1,6 +1,6 @@
-package ch.bfh.theforkers.heroes.entities.service;
+package ch.bfh.theforkers.heroes.arena.service;
 
-
+import ch.bfh.theforkers.heroes.arena.client.HealerClient;
 import ch.bfh.theforkers.heroes.entities.Party;
 
 public interface BattleService {

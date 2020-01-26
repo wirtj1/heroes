@@ -1,13 +1,11 @@
-package ch.bfh.theforkers.heroes.entities.controller;
+package ch.bfh.theforkers.heroes.arena.controller;
 
 
+import ch.bfh.theforkers.heroes.arena.client.HealerClient;
+import ch.bfh.theforkers.heroes.arena.service.BattleService;
 import ch.bfh.theforkers.heroes.entities.Party;
-import ch.bfh.theforkers.heroes.entities.service.BattleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
