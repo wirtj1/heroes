@@ -3,9 +3,11 @@ package ch.bfh.theforkers.heroes.promoter.controller;
 import ch.bfh.theforkers.heroes.promoter.service.PromoterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/promoter")
 public class PromoterController {
 
     @Autowired

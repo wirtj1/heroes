@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @FeignClient(value = "camp-service")
+@RequestMapping("/party")
 public interface CampClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/createParty?name={name}")

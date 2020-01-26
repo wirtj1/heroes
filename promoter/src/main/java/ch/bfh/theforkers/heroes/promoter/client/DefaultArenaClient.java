@@ -1,12 +1,9 @@
 package ch.bfh.theforkers.heroes.promoter.client;
 
-import ch.bfh.theforkers.heroes.promoter.client.ArenaClient;
 import ch.bfh.theforkers.heroes.promoter.model.Party;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+
 
 import java.util.List;
 
@@ -14,12 +11,9 @@ import java.util.List;
 public class DefaultArenaClient implements ArenaClient {
 
     @Override
-    public String battle(List<Party> challangers) {
-        ResponseEntity<String> response =  new RestTemplate().exchange(
-                "http://localhost:8082/battle",
-                HttpMethod.POST,
-                new HttpEntity<>(challangers),
-                String.class);
-        return response.getBody();
+    public String battle(List<Party> challengers) {
+        int winnerNumber = (int) Math.floor(Math.random()*challengers.size());
+        Party winner = challengers.get(winnerNumber);
+        return "The Arena is currently down for maintenance, the winner has been chosen randomly: " +winner.getName();
     }
 }

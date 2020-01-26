@@ -15,6 +15,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 
 @RestController
+@RequestMapping("/party")
 public class PartyController {
 
     @Autowired
