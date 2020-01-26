@@ -1,4 +1,4 @@
-package ch.bfh.theforkers.heroes.arena.model;
+package ch.bfh.theforkers.heroes.entities;
 
 import org.springframework.hateoas.RepresentationModel;
 
@@ -23,5 +23,4 @@ public class Party extends RepresentationModel {
     public void setMembers(List<Hero> members) {
         this.members = members;
     }
-
 }

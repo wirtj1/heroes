@@ -1,8 +1,9 @@
 package ch.bfh.theforkers.heroes.camp.controller;
 
-import ch.bfh.theforkers.heroes.camp.entities.Hero;
-import ch.bfh.theforkers.heroes.camp.entities.Party;
+
 import ch.bfh.theforkers.heroes.camp.service.PartyService;
+import ch.bfh.theforkers.heroes.entities.Hero;
+import ch.bfh.theforkers.heroes.entities.Party;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.support.RepositoryEntityLinks;
 import org.springframework.web.bind.annotation.GetMapping;

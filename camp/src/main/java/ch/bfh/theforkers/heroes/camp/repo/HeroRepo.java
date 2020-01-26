@@ -1,6 +1,6 @@
 package ch.bfh.theforkers.heroes.camp.repo;
 
-import ch.bfh.theforkers.heroes.camp.entities.Hero;
+import ch.bfh.theforkers.heroes.entities.Hero;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

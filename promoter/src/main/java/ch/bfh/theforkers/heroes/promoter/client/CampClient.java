@@ -1,6 +1,6 @@
 package ch.bfh.theforkers.heroes.promoter.client;
 
-import ch.bfh.theforkers.heroes.promoter.model.Party;
+import ch.bfh.theforkers.heroes.entities.Party;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-@FeignClient(value = "camp-service")
+@FeignClient(value = "camp-ch.bfh.theforkers.heroes.potionshop.service")
 @RequestMapping("/party")
 public interface CampClient {
 

@@ -1,6 +1,7 @@
 package ch.bfh.theforkers.heroes.camp.controller;
 
-import ch.bfh.theforkers.heroes.camp.entities.Hero;
+
+import ch.bfh.theforkers.heroes.entities.Hero;
 import ch.bfh.theforkers.heroes.camp.repo.HeroRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
 package ch.bfh.theforkers.heroes.camp.service;
 
-import ch.bfh.theforkers.heroes.camp.entities.Hero;
+import ch.bfh.theforkers.heroes.entities.Hero;
 
 public interface HeroService {
 

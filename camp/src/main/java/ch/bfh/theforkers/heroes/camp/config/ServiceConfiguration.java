@@ -15,7 +15,7 @@ import org.springframework.context.annotation.DependsOn;
 import java.io.IOException;
 
 @Configuration
-//@EnableMongoRepositories(basePackages = "ch.bfh.theforkers.heroes.camp.repo")
+//@EnableMongoRepositories(basePackages = "ch.bfh.theforkers.heroes.camp.ch.bfh.theforkers.heroes.potionshop.repo")
 public class ServiceConfiguration {
     @Bean
     public HeroService heroService() {

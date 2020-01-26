@@ -1,6 +1,6 @@
 package ch.bfh.theforkers.heroes.promoter.client;
 
-import ch.bfh.theforkers.heroes.promoter.model.Party;
+import ch.bfh.theforkers.heroes.entities.Party;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.stereotype.Component;
 

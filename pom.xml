@@ -23,6 +23,8 @@
         <module>healer</module>
         <module>registry</module>
         <module>frontend</module>
+        <module>entities</module>
+        <module>potionShop</module>
     </modules>
 
     <properties>

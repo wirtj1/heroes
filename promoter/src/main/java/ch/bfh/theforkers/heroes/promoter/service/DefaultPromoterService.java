@@ -1,8 +1,8 @@
 package ch.bfh.theforkers.heroes.promoter.service;
 
+import ch.bfh.theforkers.heroes.entities.Party;
 import ch.bfh.theforkers.heroes.promoter.client.ArenaClient;
 import ch.bfh.theforkers.heroes.promoter.client.CampClient;
-import ch.bfh.theforkers.heroes.promoter.model.Party;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

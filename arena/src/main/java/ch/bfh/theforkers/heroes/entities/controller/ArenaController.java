@@ -1,7 +1,8 @@
-package ch.bfh.theforkers.heroes.arena.controller;
+package ch.bfh.theforkers.heroes.entities.controller;
 
-import ch.bfh.theforkers.heroes.arena.model.Party;
-import ch.bfh.theforkers.heroes.arena.service.BattleService;
+
+import ch.bfh.theforkers.heroes.entities.Party;
+import ch.bfh.theforkers.heroes.entities.service.BattleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

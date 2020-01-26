@@ -1,7 +1,8 @@
 package ch.bfh.theforkers.heroes.camp.service;
 
-import ch.bfh.theforkers.heroes.camp.entities.Hero;
-import ch.bfh.theforkers.heroes.camp.entities.Party;
+
+import ch.bfh.theforkers.heroes.entities.Hero;
+import ch.bfh.theforkers.heroes.entities.Party;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
