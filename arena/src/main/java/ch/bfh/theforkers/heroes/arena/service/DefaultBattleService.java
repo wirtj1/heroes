@@ -87,7 +87,7 @@ public class DefaultBattleService implements BattleService {
 
         // battle until hp runs out
         while(defender.getHp() >= 0) {
-            if(Math.random() > 0.7){
+            if(Math.random() > 0.9){
                 Double currentHp = defender.getHp();
                 ResponseEntity<Double> response =  new RestTemplate().exchange(
                         "http://localhost:8083/healer/heal?hp={currentHp}",

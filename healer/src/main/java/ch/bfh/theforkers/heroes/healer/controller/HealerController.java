@@ -11,6 +11,10 @@ public class HealerController {
 
     @GetMapping(value = "/heal")
     public Double heal(Double hp) {
-       return hp+10;
+        double newhp = hp+10;
+        if(newhp > 100){
+            return 100.0;
+        }
+        return hp+10;
     }
 }

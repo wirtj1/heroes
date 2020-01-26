@@ -1,3 +1,4 @@
+/*
 package ch.bfh.theforkers.heroes.promoter.client;
 
 import ch.bfh.theforkers.heroes.promoter.model.Party;
@@ -22,3 +23,4 @@ public class DefaultCampClient implements CampClient {
         return response.getBody();
     }
 }
+*/
