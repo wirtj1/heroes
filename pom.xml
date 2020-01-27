@@ -17,13 +17,13 @@
     <name>heroes</name>
     <packaging>pom</packaging>
     <modules>
+        <module>entities</module>
+        <module>registry</module>
         <module>camp</module>
         <module>arena</module>
         <module>promoter</module>
         <module>healer</module>
-        <module>registry</module>
         <module>frontend</module>
-        <module>entities</module>
         <module>potionShop</module>
     </modules>
 
