@@ -14,7 +14,7 @@ Since we were unaware of how to create and run java applications properly we mis
 
 ### Version issue Resource vs Entity
 During the development of the application some issues arose with the Entitymodel. We tried building the application as described in the documentation, however the "org.springframework.hateoas.EntityModel" did not exist. After some research the "org.springframework.hateoas.Resource" was found which, in theory should have accomplished the same thing - but it did not. 
-The code compiled and it apperaed to wortk just fine, however when testing the requests, exceptions were thrown. After a lot of investigation and testing We realized that the main POM had the wrong parent version. We think it was 2.0.1 insted of 2.2.2. After realising this and chaning all resources to entitymodels everything worked fine.
+The code compiled and it apperaed to wortk just fine, however when testing the requests, exceptions were thrown. After a lot of investigation and testing We realized that the main POM had the wrong parent version. It might have been 2.0.1 insted of 2.2.2. After realising this and chaning all resources to entitymodels everything worked fine.
 
 The correct version was set as below:
 ```XML
@@ -43,12 +43,11 @@ In some extension we have added a tried inject clients via the @Autowired attrib
 ```
 This did infact help compiling the application, however the controllers were not available. Neither in the eureka client or directly. 
 Therefore, some classes were combined making the injection unecessary.
-we tried
 Additionally some request were then sent as a simple http request rather than a nice feignclient. This was a pitty and a lot of hours were invested. However we did not get it working.
 
 ```Java
  //defender = healerClient.heal(defender); 
- //^^ this would have been beautifull, but did somehow not work
+ //^^ this would have been beautiful, but did somehow not work
 HttpHeaders headers = new HttpHeaders();
 headers.setContentType(MediaType.APPLICATION_JSON);
 HttpEntity entity = new HttpEntity(defender,headers);
@@ -119,7 +118,7 @@ To achvieve this, the following thins were aadded:
   - Gandalf Service
   - (Potionshopclient)
   - (Fallbackpotionshopclient)
-- Borken Potionshop
+- Broken Potionshop
   - Potion Repo
   - PotionService
   - ShopService
