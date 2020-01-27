@@ -44,6 +44,9 @@ public class GandalfHealerService implements HealerService {
         rare.setName("rare healing potion");
         rare.setPrice(200);
         rare.setHealingAmount(13.5);
+        potions.add(superior);
+        potions.add(rare);
+        potions.add(common);
         potionShop.setPotions(potions);
     }
 }
