@@ -43,7 +43,7 @@
         </dependency>
         <dependency>
             <groupId>ch.bfh.theforkers</groupId>
-            <artifactId>contracts</artifactId>
+            <artifactId>entities</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
