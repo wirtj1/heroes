@@ -107,7 +107,7 @@ Therefore, the Potionshop was then abandoned from the town and the healer starte
 
 ## Final Result
 
-The Heros are battling for their life in the arena, and if the god's allow it, they can go to the healer and give him all their money. The healer, Gandalf, then looks in his shop, which he filled and priced himself, and gives the hero all his money can buy and heals him. The Hero goes back into battle. During the battle this might happen several times, however Gandlaf does not work for free. 
+The Heros are battling for their life in the arena, and if the gods allow it, they can go to the healer and give him all their money. The healer, Gandalf, then looks in his shop, which he filled and priced himself, and gives the hero, all his money can buy, and heals him. The Hero goes back into battle. During the battle this might happen several times, however Gandlaf does not work for free. 
 
 To achvieve this, the following thins were aadded: 
 - Entity Module
