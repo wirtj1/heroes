@@ -139,6 +139,11 @@ To run the application, the registry service needs to be started first then all 
 ```
 The Potionshop unfortunately has no real function at the moment therefore it does not need to be started.
 
+Then the promoter service is avaialbable via the url :
+http://localhost:8081/promoter/promoteFight
+
+We realised that it occurs, that some services are not available. When this happens the corresponding application needs to be restarted. 
+
 ## Conclusion
 
 The course was very interesting and gave a good oversight of modern Java development. Unfortunately, we both were very involved in our thesis and did not follow the course as intended. Therefore, a lot had to be learned with pain and suffering. 
